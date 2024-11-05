@@ -74,10 +74,11 @@ def solve_defined_problem(algorithm,
 
         return sol, obj_mean, np.array(solver.iterTime)
 
-# User defined setting
-algorithm = "DVFN" # You have 6 options 1) MSP 2) SDDP 3) VFGLexp 4) VFGLquad 5) VFGLlinear 6) DVFN
 
-problem = "PO" # You have 2 options 1) PO 2) EP
+# User defined setting
+problem = "PO"  # You have 2 options 1) PO 2) EP
+
+algorithm = "DVFN"  # You have 6 options 1) MSP 2) SDDP 3) VFGLexp 4) VFGLquad 5) VFGLlinear 6) DVFN
 
 n_stages = 11
 
@@ -86,12 +87,12 @@ n_batches = 3
 hyper_dic = {}
 hyper_dic['min_iter'] = 75
 hyper_dic['max_iter'] = 75
-hyper_dic['n_epochs'] = 5 # for only DVFN
-hyper_dic['n_nodes'] = 64 # for only DVFN
-hyper_dic['n_hlayers'] = 1 # for only DVFN
-hyper_dic['optimizer'] = "Adam" # for only DVFN
-hyper_dic['lr'] = 0.0015 # for only DVFN
-hyper_dic['activation'] = 'softplus' # for only DVFN
+hyper_dic['n_epochs'] = 5  # for only DVFN
+hyper_dic['n_nodes'] = 64  # for only DVFN
+hyper_dic['n_hlayers'] = 1  # for only DVFN
+hyper_dic['optimizer'] = "Adam"  # for only DVFN
+hyper_dic['lr'] = 0.0015  # for only DVFN
+hyper_dic['activation'] = 'softplus'  # for only DVFN
 
 sol, obj, time = solve_defined_problem(algorithm,
                                        problem,
@@ -103,3 +104,23 @@ print("First Stage Solution: ")
 print(sol[-1])
 print("Objective Value: ", obj)
 print("Total Elapsed Time: ", sum(time))
+
+# for problem in ["PO", "EP"]:
+#     if problem == "EP":
+#         n_stages = 15
+#         n_batches = 2
+#         hyper_dic['activation'] = "ELU"
+#     for algorithm in ["MSP", "SDDP", "VFGLexp", "VFGLquad", "VFGLlinear", "DVFN"]:
+#         for trial in range(5):
+#             print("Problem: ", problem, "| Algorithm: ", algorithm, "| Trial: ", trial)
+#
+#             sol, obj, time = solve_defined_problem(algorithm,
+#                                                    problem,
+#                                                    n_stages,
+#                                                    n_batches,
+#                                                    hyper_dic)
+#
+#             print("First Stage Solution: ")
+#             print(sol[-1])
+#             print("Objective Value: ", obj)
+#             print("Total Elapsed Time: ", sum(time))
