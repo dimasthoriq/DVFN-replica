@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 def solve_defined_problem(algorithm,
                           problem,
