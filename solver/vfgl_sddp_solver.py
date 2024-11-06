@@ -829,7 +829,7 @@ class solver:
         else:
             print('stage: {}, regime: {}'.format(stage, regime))
             if stage < self.stageNum - 1:
-                theta = self.varValues(self.VF_param[stage][regime])
+                theta = self.varValues(self.param_VF[stage][regime])
                 print('Current theta value: {}'.format(theta))
             if stage > 0:
                 prevStageIdx = self.stage2prob[stage - 1]
@@ -1239,8 +1239,8 @@ class solver:
             params = np.load(f)
             if isinstance(params, np.ndarray):
                 params = params.tolist()
-        # if len(self.VF_param) > len(params):
-        #     lenDiff = len(self.VF_param) - len(params)
+        # if len(self.param_VF) > len(params):
+        #     lenDiff = len(self.param_VF) - len(params)
         #     params += params[-1]*lenDiff
         if not stageIdx:
             for stage_param, stage_param_loaded in zip(self.param_VF, params):
