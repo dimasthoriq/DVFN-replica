@@ -834,7 +834,7 @@ class solver:
             if stage > 0:
                 prevStageIdx = self.stage2prob[stage - 1]
                 prevSol = []
-                for var in self.VF_var[prevStageIdx]:
+                for var in self.var_VF[prevStageIdx]:
                     prevSol += list(var.value.squeeze())
                 print('PrevSol: {}'.format(prevSol))
             print('Current cumulative theta update: {}'.format(self.theta_update))

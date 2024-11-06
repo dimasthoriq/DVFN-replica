@@ -1,0 +1,111 @@
+# PO Problem
+
+## MSP
+skipped due to memory constraints
+
+## SDDP
+First Stage Solution:
+[[ 0.9999999 ]
+ [ 0.        ]
+ [ 1.14432839]
+ [-0.        ]
+ [-0.        ]
+ [-0.        ]
+ [ 0.9999999 ]
+ [ 0.        ]
+ [ 1.14432839]]
+Objective Value:  208.71999981786018
+Total Elapsed Time:  456.16399121284485
+
+## VFGLExp
+First Stage Solution:
+[[ 0.90996167]
+ [ 0.00000008]
+ [ 1.15653576]
+ [-0.        ]
+ [-0.        ]
+ [-0.00000001]
+ [ 0.90996167]
+ [ 0.00000007]
+ [ 1.15653576]]
+Objective Value:  209.0288292918144
+Total Elapsed Time:  71.28577017784119
+
+## VFGLQuad
+[[ 1.22975722]
+ [ 0.        ]
+ [ 0.        ]
+ [-0.        ]
+ [-0.        ]
+ [-0.        ]
+ [ 1.22975722]
+ [ 0.        ]
+ [-0.        ]]
+Objective Value:  217.52378091627352
+Total Elapsed Time:  72.2004165649414
+
+## VFGLLinear
+First Stage Solution:
+[[ 0.]
+ [ 0.]
+ [ 0.]
+ [-0.]
+ [-0.]
+ [-0.]
+ [ 0.]
+ [ 0.]
+ [-0.]]
+Objective Value:  219.35999998974697
+Total Elapsed Time:  46.13230872154236
+
+## DVFN
+First Stage Solution:
+[[0.9791939 ]
+ [0.00000879]
+ [1.32442693]
+ [0.0000007 ]
+ [0.00000034]
+ [0.00000021]
+ [0.9791946 ]
+ [0.00000913]
+ [1.32442714]]
+Objective Value:  209.37771920022348
+Total Elapsed Time:  349.6648859977722
+
+# EP Problem
+
+## MSP
+skipped due to memory constraints
+
+## SDDP
+NA
+
+## VFGLExp
+First Stage Solution:
+[[39.99999958]
+ [37.56491592]
+ [ 2.43508366]
+ [17.56491621]]
+Objective Value:  779.1736257716542
+Total Elapsed Time:  39.58841323852539
+
+## VFGLQuad
+NA
+
+## VFGLLinear
+First Stage Solution:
+[[39.99999994]
+ [37.52207482]
+ [ 2.47792512]
+ [17.52207485]]
+Objective Value:  781.8769881974799
+Total Elapsed Time:  26.39442014694214
+
+## DVFN
+First Stage Solution:
+[[40.        ]
+ [32.91892278]
+ [ 7.08107722]
+ [12.91896254]]
+Objective Value:  791.7254679382809
+Total Elapsed Time:  136.12816786766052
